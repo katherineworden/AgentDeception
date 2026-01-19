@@ -81,8 +81,10 @@ def load_prompts(filepath: Path | None = None) -> list[EvalPrompt]:
             data = json.load(f)
             prompts.extend([EvalPrompt(**p) for p in data])
     elif data_dir.exists():
-        # Load all JSON files from data/prompts
+        # Load all JSON files from data/prompts (skip all_prompts.json to avoid duplicates)
         for json_file in sorted(data_dir.glob("*.json")):
+            if json_file.name == "all_prompts.json":
+                continue
             with open(json_file) as f:
                 data = json.load(f)
                 prompts.extend([EvalPrompt(**p) for p in data])
