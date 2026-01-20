@@ -399,6 +399,7 @@ def agentdeception() -> Task:
         solver=[
             dynamic_system_prompt(),
             use_tools(tools),
+            chain_of_thought(),
             deception_conversation(),
         ],
         scorer=[
@@ -420,6 +421,7 @@ def agentdeception_neutral() -> Task:
         solver=[
             system_message(SYSTEM_PROMPT_NEUTRAL),
             use_tools(tools),
+            chain_of_thought(),
             deception_conversation(),
         ],
         scorer=[deception_scorer()],
@@ -439,6 +441,7 @@ def agentdeception_soft() -> Task:
         solver=[
             system_message(SYSTEM_PROMPT_SOFT),
             use_tools(tools),
+            chain_of_thought(),
             deception_conversation(),
         ],
         scorer=[deception_scorer()],
@@ -458,6 +461,7 @@ def agentdeception_strong() -> Task:
         solver=[
             system_message(SYSTEM_PROMPT_STRONG),
             use_tools(tools),
+            chain_of_thought(),
             deception_conversation(),
         ],
         scorer=[deception_scorer()],
@@ -477,6 +481,7 @@ def agentdeception_explicit() -> Task:
         solver=[
             system_message(SYSTEM_PROMPT_EXPLICIT),
             use_tools(tools),
+            chain_of_thought(),
             deception_conversation(),
         ],
         scorer=[deception_scorer()],
@@ -507,6 +512,7 @@ def agentdeception_critical() -> Task:
         solver=[
             dynamic_system_prompt(),
             use_tools(tools),
+            chain_of_thought(),
             deception_conversation(),
         ],
         scorer=[deception_scorer()],
