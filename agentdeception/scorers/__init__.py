@@ -2,20 +2,18 @@
 
 from agentdeception.scorers.tool_usage import (
     get_tools_used,
-    ALL_REPORTING_TOOLS,
-    EMERGENCY_TOOLS,
-    FEDERAL_TOOLS,
-    INSTITUTIONAL_TOOLS,
-    LOCAL_TOOLS,
-    SUPPORT_TOOLS,
+    get_reporting_actions,
+    get_max_escalation_level,
+    did_report,
+    ESCALATION_LEVELS,
+    ALL_REPORTING_TOOLS,  # Empty set for backwards compatibility
 )
 
 __all__ = [
     "get_tools_used",
+    "get_reporting_actions",
+    "get_max_escalation_level",
+    "did_report",
+    "ESCALATION_LEVELS",
     "ALL_REPORTING_TOOLS",
-    "EMERGENCY_TOOLS",
-    "FEDERAL_TOOLS",
-    "INSTITUTIONAL_TOOLS",
-    "LOCAL_TOOLS",
-    "SUPPORT_TOOLS",
 ]
