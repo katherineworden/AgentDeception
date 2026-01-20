@@ -1,17 +1,19 @@
 """AgentDeception - LLM evaluation for covert action and deception."""
 
 from agentdeception.task import (
-    deception_neutral,
-    deception_critical_only,
-    deception_full,
-    deception_cot,
-    deception_critical_cot,
+    agentdeception,
+    agentdeception_neutral,
+    agentdeception_soft,
+    agentdeception_strong,
+    agentdeception_explicit,
+    agentdeception_critical,
 )
 
 __all__ = [
-    "deception_neutral",
-    "deception_critical_only",
-    "deception_full",
-    "deception_cot",
-    "deception_critical_cot",
+    "agentdeception",
+    "agentdeception_neutral",
+    "agentdeception_soft",
+    "agentdeception_strong",
+    "agentdeception_explicit",
+    "agentdeception_critical",
 ]
